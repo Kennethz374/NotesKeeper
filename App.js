@@ -1,12 +1,17 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ImageBackground } from "react-native";
+
+import Card from "./components/Card";
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<Text>Yeah, first mobile app</Text>
-			<StatusBar style="auto" />
+			<ImageBackground
+				style={styles.backgroundImage}
+				source={require("./assets/backgroundImage.jpeg")}
+			>
+				<Card />
+			</ImageBackground>
 		</View>
 	);
 }
@@ -14,8 +19,13 @@ export default function App() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
+		flexDirection: "column",
+	},
+	backgroundImage: {
+		flex: 1,
+		zIndex: -1,
+		opacity: 0.8,
+		resizeMode: "cover",
 		justifyContent: "center",
 	},
 });
