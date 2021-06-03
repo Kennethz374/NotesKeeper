@@ -11,6 +11,9 @@ export default function App() {
 				source={require("./assets/backgroundImage.jpeg")}
 			>
 				<Card />
+				<Card />
+				<Card />
+				<Card />
 			</ImageBackground>
 		</View>
 	);

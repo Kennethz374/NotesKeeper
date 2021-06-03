@@ -32,22 +32,26 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 		padding: 8,
 		marginHorizontal: 10,
+		marginVertical: 5,
 		borderRadius: 10,
+		maxHeight: 85,
+		flex: 1,
 	},
 	cardHeader: {
 		flex: 1,
 		flexDirection: "row",
+		marginVertical: 5,
 	},
 	headerText: {
 		alignSelf: "center",
 		paddingLeft: 8,
-		marginVertical: 5,
 		fontWeight: "bold",
 	},
 	userLogo: {
+		alignSelf: "center",
 		height: 25,
 		width: 25,
-		borderRadius: 10,
+		borderRadius: 50,
 	},
 	title: {
 		fontSize: 20,
@@ -55,7 +59,6 @@ const styles = StyleSheet.create({
 		paddingVertical: 5,
 	},
 	footer: {
-		flex: 1,
 		flexDirection: "row",
 		paddingLeft: 5,
 	},
