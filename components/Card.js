@@ -9,13 +9,16 @@ export default function Card({ image, userName, title, content, createdAt }) {
 				{/* user Logo */}
 				<Image
 					style={styles.userLogo}
-					source={require("../assets/JohnWick.jpeg")}
+					// source={require("../assets/JohnWick.jpeg")}
+					source={{
+						uri: image,
+					}}
 				/>
-				<Text style={styles.headerText}>By John Wick</Text>
+				<Text style={styles.headerText}>{userName}</Text>
 			</View>
 
 			{/* title */}
-			<Text style={styles.title}>How to Start a React Native app</Text>
+			<Text style={styles.title}>{title}</Text>
 
 			{/* Footer */}
 			<View style={styles.footer}>
@@ -40,7 +43,8 @@ const styles = StyleSheet.create({
 	cardHeader: {
 		flex: 1,
 		flexDirection: "row",
-		marginVertical: 5,
+		marginTop: 10,
+		marginBottom: 8,
 	},
 	headerText: {
 		alignSelf: "center",
@@ -54,9 +58,11 @@ const styles = StyleSheet.create({
 		borderRadius: 50,
 	},
 	title: {
+		textTransform: "capitalize",
 		fontSize: 20,
 		fontWeight: "bold",
 		paddingVertical: 5,
+		marginTop: 5,
 	},
 	footer: {
 		flexDirection: "row",

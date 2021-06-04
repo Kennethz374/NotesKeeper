@@ -6,11 +6,19 @@ import Card from "./Card";
 const DUMMY_DATA = [
 	{
 		image: "https://bit.ly/3ifrvoX",
-		userName: "Kenneth",
+		userName: "Kenneth Zhang",
 		title: "How to read docs quickly",
 		content: "lorem ipsum",
 		createdAt: "Jun 3, 2021",
 		id: "1",
+	},
+	{
+		image: "https://bit.ly/3vOuCrY",
+		userName: "John Wick",
+		title: "React Native for Beginners",
+		content: "lorem ipsum",
+		createdAt: "Jun 3, 2021",
+		id: "2",
 	},
 ];
 
