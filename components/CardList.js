@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 
 import Card from "./Card";
 
@@ -44,7 +44,7 @@ const CardList = () => {
 const styles = StyleSheet.create({
 	cardList: {
 		flex: 1,
-		marginTop: 40,
+		marginTop: 10,
 	},
 });
 

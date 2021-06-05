@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, SafeAreaView, Image } from "react-native";
 
-export default function Card({ image, userName, title, content, createdAt }) {
+export default function Card({ image, userName, title, createdAt }) {
 	return (
-		<View style={styles.cardContainer}>
+		<SafeAreaView style={styles.cardContainer}>
 			{/* Header */}
-			<View style={styles.cardHeader}>
+			<SafeAreaView style={styles.cardHeader}>
 				{/* user Logo */}
 				<Image
 					style={styles.userLogo}
@@ -15,18 +15,18 @@ export default function Card({ image, userName, title, content, createdAt }) {
 					}}
 				/>
 				<Text style={styles.headerText}>{userName}</Text>
-			</View>
+			</SafeAreaView>
 
 			{/* title */}
 			<Text style={styles.title}>{title}</Text>
 
 			{/* Footer */}
-			<View style={styles.footer}>
-				<Text style={styles.footerText}>June 2</Text>
+			<SafeAreaView style={styles.footer}>
+				<Text style={styles.footerText}>{createdAt}</Text>
 				<Text style={styles.footerText}> . </Text>
 				<Text style={styles.footerText}>2 mins read</Text>
-			</View>
-		</View>
+			</SafeAreaView>
+		</SafeAreaView>
 	);
 }
 
@@ -45,11 +45,13 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		marginTop: 10,
 		marginBottom: 8,
+		marginHorizontal: 5,
 	},
 	headerText: {
 		alignSelf: "center",
 		paddingLeft: 8,
 		fontWeight: "bold",
+		marginHorizontal: 5,
 	},
 	userLogo: {
 		alignSelf: "center",
@@ -59,10 +61,11 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		textTransform: "capitalize",
-		fontSize: 20,
+		fontSize: 18,
 		fontWeight: "bold",
 		paddingVertical: 5,
 		marginTop: 5,
+		marginHorizontal: 5,
 	},
 	footer: {
 		flexDirection: "row",
