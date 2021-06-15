@@ -7,7 +7,7 @@ function MainHeader() {
 	return (
 		<SafeAreaView style={styles.mainHeaderContainer}>
 			{/* logo my notes for now */}
-			<Text style={styles.headerLogo}>My Notes</Text>
+			{/* <Text style={styles.headerLogo}>My Notes</Text> */}
 			{/* Searchbar */}
 			<SafeAreaView style={styles.search}>
 				<Ionicons name="search-outline" size={24} color="black" />
@@ -25,6 +25,7 @@ function MainHeader() {
 const styles = StyleSheet.create({
 	mainHeaderContainer: {
 		marginTop: 30,
+		// flexDirection: "row",
 	},
 	searchBar: {
 		borderRadius: 5,
